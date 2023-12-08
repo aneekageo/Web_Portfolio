@@ -1,0 +1,237 @@
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(5deg);
+    }
+    80% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animated-image {
+    width: 300px; /* Adjust the width as needed */
+    animation: swing 2s ease-in-out infinite; /* Adjust the duration and easing function */
+}
+
+.hero {
+    background: url('../static/images/bg.png') center/cover no-repeat; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: goldenrod;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000; 
+}
+
+.hero h1 {
+    font-family: cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: fadeInUp 1s ease;
+}
+
+
+/* Add the following styles for animations and color scheme */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-links a{
+    color: #ffffff;
+    padding: 0px 5px 0px 5px;
+  }
+  
+  
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../static/images/bg.png);
+}
+
+
+@keyframes progress-bar-stripes {
+    from {
+      background-position: 40px 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  
+  }
+  
+  @keyframes fill-progress {
+    from {
+      width: 0;
+    }
+  }
+  
+  .container-progress {
+    width: 500px;
+    display: block;
+   }
+
+   .container-progress h1,.about-content h1 {
+    font-family: monospace;
+    width: 500px;
+    display: block;
+   
+  }
+
+ .about-section .about-content h2{
+    font-family: monospace;
+  }
+
+  .about-section .about-content p{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .progress {
+    overflow: hidden;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 40px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: goldenrod; 
+    border-radius: 40px;
+    animation: fill-progress 2s ease-out forwards, progress-bar-stripes 2s linear infinite; /* Added both animations */
+  }
+  
+  .progress-bar[data-value] {
+    width: calc(var(--value) * 1%);
+  }
+  
+  .progress-striped .progress-bar {
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 40px 40px;
+  }
+  
+  /* Additional styles for demonstration purposes */
+  h3 {
+    color: goldenrod;
+    text-align: left;
+    text-shadow: 2px 2px 4px #000; 
+  }
+  
+  .about-section
+  {
+      margin-top: 150px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+  }
+  .about-image img
+      {
+          max-width: 100%;
+          
+      }
+  
+  .about-image {
+      margin: 0 100px;
+      
+  }
+  #home-image{
+    transform: translate(225px,-270px);
+  }
+  
+  .about-content
+  {
+      text-align: left;
+      margin: 0 20px;
+      
+  }
+
+ .about-content h2
+  {
+    font-size: 50px;
+    font-family: cursive;
+  }
+ 
+
+  .navbar {
+    font-family: monospace;
+    background-color:goldenrod ;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    z-index: 10; /* Adjust the height as needed */
+  }
+
+  
+  
+  .left-section {
+    padding: 10px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 16px;
+  }
+  
+  .right-section {
+    display: flex;
+  }
+  
+  .navbar a {
+    display: block;
+    color: teal;
+    text-align: center;
+    padding: 10px 16px; /* Adjust the padding as needed */
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
